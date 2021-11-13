@@ -3,6 +3,21 @@ class Dec2Hex
 {
     private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
+    static {
+        ConsoleHandler handler = new ConsoleHandler();
+        handler.setFormatter(new SimpleFormatter() {
+          @Override
+          public String formatMessage(LogRecord record) {
+        	  StringBuilder sb = new StringBuilder();
+              sb.append(record.getLevel()).append(':');
+              sb.append(record.getMessage()).append('\n');
+              return sb.toString();
+          }
+        });
+        D2HLog.setUseParentHandlers(false);
+        D2HLog.addHandler(handler);
+      }
+    
     //main function calls sub routines to convert int to hex
     public static void main(String[] args)
     {
