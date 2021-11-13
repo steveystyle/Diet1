@@ -25,7 +25,7 @@ class Dec2Hex
         {
             if(possitiveIntCheck(intParse(args)))
             {
-            	D2HLog.log(Level.INFO, "Converting the Decimal Value {0} to Hex... \n", Integer.toString(intParse(args)));
+            	D2HLog.log(Level.INFO, "Converting the Decimal Value {0} to Hex...", Integer.toString(intParse(args)));
             	D2HLog.log(Level.INFO, "Hexadecimal representation is: {0}", hexConverter(intParse(args)));                       
             }else{
                 D2HLog.warning("Error - Only positive integer to be entered");
