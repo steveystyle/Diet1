@@ -7,25 +7,20 @@ class Dec2Hex
         {
             if(possitiveIntCheck(intParse(args)))
             {
-                System.out.println("Converting the Decimal Value " + intParse(args) + " to Hex...");                
-                System.out.println("Hexadecimal representation is: " + hexConverter(intParse(args)));              
+                D2HLog.info("Converting the Decimal Value " + intParse(args) + " to Hex..."); 
+            	D2HLog.info("Hexadecimal representation is: " + hexConverter(intParse(args)));               
             }else{
-                System.out.println("Error - Only positive integer to be entered");
+                D2HLog.warning("Error - Only positive integer to be entered");
             }
         }else{
-            System.out.println("Error - Nothing input");
+            D2HLog.warning("Error - Nothing input");
         }
     }
     
     //the function checks that there has been an input supplied
     private static boolean nullInputCheck (String[] args)
     {
-        if(args.length>0)
-        {
-            return true;
-        }else{
-            return false;
-        }
+        return args.length>0;
     }
     
     //this function attempts to parse the input to an int and returns a negative int if processes fails. 
