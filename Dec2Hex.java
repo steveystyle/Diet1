@@ -1,3 +1,4 @@
+import java.util.logging.Logger;
 class Dec2Hex
 {
     private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
