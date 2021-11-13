@@ -9,8 +9,8 @@ class Dec2Hex
             {
                 System.out.println("Converting the Decimal Value " + intParse(String arg[]) + " to Hex...");                
                 System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[]));              
-            }else(
-                
+            }else{
+                System.out.println("Error - Nothing input");
             }
         }else{
             System.out.println("Error - Nothing input");
