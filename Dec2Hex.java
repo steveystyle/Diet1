@@ -1,23 +1,23 @@
-import java.util.Scanner;
 class Dec2Hex
 {
     public static void main(String args[])
     {
-        if(nullInputCheck(args[]))
+        if(nullInputCheck(args))
         {
-            if(possIntCheck(intParse(String arg[])))
+            if(possitiveIntCheck(intParse(args)))
             {
-                System.out.println("Converting the Decimal Value " + intParse(String arg[]) + " to Hex...");                
-                System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[])));              
+                System.out.println("Converting the Decimal Value " + intParse(args) + " to Hex...");                
+                System.out.println("Hexadecimal representation is: " + hexConverter(intParse(args)));              
             }else{
-                System.out.println("Error - Nothing input");
+                System.out.println("Error - Only positive integer to be entered");
             }
         }else{
             System.out.println("Error - Nothing input");
         }
     }
     
-    public boolean nullInputCheck (String args[])
+    
+    private static boolean nullInputCheck (String args[])
     {
         if(args.length>0)
         {
@@ -27,7 +27,7 @@ class Dec2Hex
         }
     }
     
-    public int intParse(String arg[])
+    public static int intParse(String arg[])
     {
         try
         {
@@ -37,7 +37,7 @@ class Dec2Hex
         }       
     }
     
-    public boolean possIntCheck(int i)
+    public static boolean possitiveIntCheck(int i)
     {
         if(i>0)
         {
@@ -47,7 +47,7 @@ class Dec2Hex
         }
     }
     
-    private string hexConverter(int i)
+    private static string hexConverter(int i)
     {
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         string result = "";
