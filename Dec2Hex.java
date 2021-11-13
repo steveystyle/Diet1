@@ -10,7 +10,7 @@ class Dec2Hex
         ConsoleHandler handler = new ConsoleHandler();
         handler.setFormatter(new SimpleFormatter() {
             @Override public String format(LogRecord record) {
-            	return "\n" + formatMessage(record);
+            	return "\n" + formatMessage(record) + "\n";
             }
         });
         D2HLog.setUseParentHandlers(false);
