@@ -3,7 +3,7 @@ import java.util.logging.*;
 
 class Dec2Hex
 {
-    //Declareing the class logger
+    //Declaring the class logger
     private static final Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
     //Class static initialization block to format console handler for Logger and only output message removing other metadata
@@ -35,13 +35,13 @@ class Dec2Hex
         }
     }
     
-    //the function checks that there has been an input supplied
+    //function checks that there has been an input supplied
     private static boolean nullInputCheck (String[] args)
     {
         return args.length>0;
     }
     
-    //this function attempts to parse the input to an int and returns a negative int if processes fails. 
+    //function attempts to parse the input to an int and returns a negative int if process fails. 
     public static int intParse(String[] args)
     {
         try
@@ -52,14 +52,14 @@ class Dec2Hex
         }       
     }
     
-    //this function checks if the parsed input is a positive int
+    //function checks if the parsed input is a positive int
     public static boolean possitiveIntCheck(int i)
     {       
         return i>0;
     }
     
     
-    //this function converts the validated input to hex if all validation gates passed
+    //function converts the validated input to hex if all validation gates passed
     private static String hexConverter(int i)
     {
         char[] ch={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
