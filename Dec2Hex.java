@@ -8,7 +8,7 @@ class Dec2Hex
             if(possIntCheck(intParse(String arg[])))
             {
                 System.out.println("Converting the Decimal Value " + intParse(String arg[]) + " to Hex...");                
-                System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[]));              
+                System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[])));              
             }else{
                 System.out.println("Error - Nothing input");
             }
