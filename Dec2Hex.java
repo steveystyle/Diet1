@@ -25,10 +25,10 @@ class Dec2Hex
                 }
                 System.out.println("Hexadecimal representation is: " + hexadecimal);
             }else{
-                System.out.println("Error - Please enter a whole positive integer.")
+                System.out.println("Error - Please enter a whole positive integer.");
             }
         }else{
-            System.out.println("Error - nothing input!")
+            System.out.println("Error - nothing input!");
         }
     }
 }
