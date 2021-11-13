@@ -2,7 +2,7 @@ class Dec2Hex
 {
     public static void main(String args[])
     {
-        if(nullInputCheck(args[]).class)
+        if(nullInputCheck(args[]))
         {
             if(possIntCheck(intParse(String arg[]).class).class)
             {
@@ -16,7 +16,7 @@ class Dec2Hex
         }
     }
     
-    private boolean nullInputCheck (String args[])
+    protected boolean nullInputCheck (String args[])
     {
         if(args.length>0)
         {
@@ -26,7 +26,7 @@ class Dec2Hex
         }
     }
     
-    private int intParse(String arg[])
+    public int intParse(String arg[])
     {
         try
         {
