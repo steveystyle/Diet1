@@ -27,7 +27,7 @@ class Dec2Hex
         }
     }
     
-    public static int intParse(String arg[])
+    public static int intParse(String args[])
     {
         try
         {
