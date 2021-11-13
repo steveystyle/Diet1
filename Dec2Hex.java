@@ -2,9 +2,9 @@ class Dec2Hex
 {
     public static void main(String args[])
     {
-        if(nullInputCheck(args[]))
+        if(nullInputCheck(args[]).class)
         {
-            if(possIntCheck(intParse(String arg[])))
+            if(possIntCheck(intParse(String arg[]).class).class)
             {
                 System.out.println("Converting the Decimal Value " + intParse(String arg[]) + " to Hex...");                
                 System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[]));              
