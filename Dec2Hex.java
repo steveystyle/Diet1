@@ -3,9 +3,10 @@ import java.util.logging.*;
 
 class Dec2Hex
 {
+    //Declareing the class logger
     private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
-    //staic
+    //Class static initialization block to format console handler for Logger and only output message removing other metadata
     static {
         ConsoleHandler handler = new ConsoleHandler();
         handler.setFormatter(new SimpleFormatter() {
@@ -24,8 +25,7 @@ class Dec2Hex
         {
             if(possitiveIntCheck(intParse(args)))
             {
-                D2HLog.info("Converting the Decimal Value " + intParse(args) + " to Hex..."); 
-            	D2HLog.info("Hexadecimal representation is: " + hexConverter(intParse(args)));               
+            	D2HLog.info("Converting the Decimal Value " + intParse(args) + " to Hex... \nHexadecimal representation is: " + hexConverter(intParse(args)));                       
             }else{
                 D2HLog.warning("Error - Only positive integer to be entered");
             }
