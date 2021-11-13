@@ -5,7 +5,7 @@ class Dec2Hex
     {
         if(nullInputCheck(args[]))
         {
-            if(possIntCheck(intParse(String arg[]).class).class)
+            if(possIntCheck(intParse(String arg[])))
             {
                 System.out.println("Converting the Decimal Value " + intParse(String arg[]) + " to Hex...");                
                 System.out.println("Hexadecimal representation is: " + hexConverter(intParse(String arg[]));              
@@ -17,7 +17,7 @@ class Dec2Hex
         }
     }
     
-    protected boolean nullInputCheck (String args[])
+    public boolean nullInputCheck (String args[])
     {
         if(args.length>0)
         {
@@ -37,7 +37,7 @@ class Dec2Hex
         }       
     }
     
-    private boolean possIntCheck(int i)
+    public boolean possIntCheck(int i)
     {
         if(i>0)
         {
