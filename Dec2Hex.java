@@ -1,19 +1,23 @@
+
 import java.util.logging.*;
+
+class MyFormatter extends Formatter{
+    @Override
+    public String format(LogRecord record) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(record.getLevel()).append(':');
+        sb.append(record.getMessage()).append('\n');
+        return sb.toString();
+    }    
+}
+
 class Dec2Hex
 {
     private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
     static {
         ConsoleHandler handler = new ConsoleHandler();
-        handler.setFormatter(new SimpleFormatter() {
-          @Override
-          public String formatMessage(LogRecord record) {
-        	  StringBuilder sb = new StringBuilder();
-              sb.append(record.getLevel()).append(':');
-              sb.append(record.getMessage()).append('\n');
-              return sb.toString();
-          }
-        });
+        handler.setFormatter(new MyFormatter());
         D2HLog.setUseParentHandlers(false);
         D2HLog.addHandler(handler);
       }
