@@ -4,14 +4,14 @@ import java.util.logging.*;
 class Dec2Hex
 {
     //Declareing the class logger
-    private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    private static final Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
     
     //Class static initialization block to format console handler for Logger and only output message removing other metadata
     static {
         ConsoleHandler handler = new ConsoleHandler();
         handler.setFormatter(new SimpleFormatter() {
-            @Override public String format(LogRecord record) {
-            	return "\n" + formatMessage(record) + "\n";
+            @Override public String format(LogRecord myRecord) {
+            	return "\n" + formatMessage(myRecord) + "\n";
             }
         });
         D2HLog.setUseParentHandlers(false);
@@ -25,7 +25,8 @@ class Dec2Hex
         {
             if(possitiveIntCheck(intParse(args)))
             {
-            	D2HLog.info("Converting the Decimal Value " + intParse(args) + " to Hex... \nHexadecimal representation is: " + hexConverter(intParse(args)));                       
+            	D2HLog.log(Level.INFO, "Converting the Decimal Value {0} to Hex... \n", Integer.toString(intParse(args)));
+            	D2HLog.log(Level.INFO, "Hexadecimal representation is: {0}", hexConverter(intParse(args)));                       
             }else{
                 D2HLog.warning("Error - Only positive integer to be entered");
             }
@@ -61,7 +62,7 @@ class Dec2Hex
     //this function converts the validated input to hex if all validation gates passed
     private static String hexConverter(int i)
     {
-        char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+        char[] ch={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         StringBuilder result = new StringBuilder();
         for (; i!=0; i=i/16) {        	
             result.insert(0,ch[i%16]);
