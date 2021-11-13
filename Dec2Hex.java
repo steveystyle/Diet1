@@ -1,5 +1,7 @@
 class Dec2Hex
 {
+    private final static Logger D2HLog = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
+    
     //main function calls sub routines to convert int to hex
     public static void main(String[] args)
     {
