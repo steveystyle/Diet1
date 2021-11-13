@@ -1,21 +1,29 @@
 #! /bin/bash
 
-echo "Test - no argument supplied - Error expected"
+echo "\nTest - no argument supplied - Error expected"
 
 java Dec2Hex
 
-echo "Test - non integer 'blah' supllied as argument - Error expected"
+echo "\nTest - non integer 'blah' supllied as argument - Error expected"
 
 java Dec2Hex 'blah'
 
-echo "Test - negative integer -1 supplied as argument - Error expected"
+echo "\nTest - negative integer -1 supplied as argument - Error expected"
 
 java Dec2Hex -1
 
-echo "Test - 0 supplied as argument - Error expected"
+echo "\nTest - 0 supplied as argument - Error expected"
 
 java Dec2Hex 0
 
-echo "acceptable input 15 test - Output expected 'F'"
+echo "\nTest - decimal 1.5 supplied as argument - Error expected"
+
+java Dec2Hex 1.5
+
+echo "\nTest - negative decimal -1.5 supplied as argument - Error expected"
+
+java Dec2Hex -1.5
+
+echo "\nacceptable input 15 test - Output expected 'F'"
 
 java Dec2Hex 15
