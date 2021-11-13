@@ -1,5 +1,6 @@
 class Dec2Hex
 {
+    //main function calls sub routines to convert int to hex
     public static void main(String args[])
     {
         if(nullInputCheck(args))
@@ -16,7 +17,7 @@ class Dec2Hex
         }
     }
     
-    
+    //the function checks that there has been an input supplied
     private static boolean nullInputCheck (String args[])
     {
         if(args.length>0)
@@ -27,6 +28,7 @@ class Dec2Hex
         }
     }
     
+    //this function attempts to parse the input to an int and returns a negative int if processes fails. 
     public static int intParse(String args[])
     {
         try
@@ -37,6 +39,7 @@ class Dec2Hex
         }       
     }
     
+    //this function checks if the parsed input is a positive int
     public static boolean possitiveIntCheck(int i)
     {
         if(i>0)
@@ -47,6 +50,8 @@ class Dec2Hex
         }
     }
     
+    
+    //this function converts the validated input to hex if all validation gates passed
     private static String hexConverter(int i)
     {
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
